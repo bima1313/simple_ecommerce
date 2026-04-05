@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_ecommerce/core/constants/route_constants.dart';
 import 'package:simple_ecommerce/core/theme/app_theme.dart';
 
 class App extends StatelessWidget {
@@ -10,6 +11,7 @@ class App extends StatelessWidget {
       title: 'Atelier',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
+      routes: Routes.routeConfig(),
     );
   }
 }

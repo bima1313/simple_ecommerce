@@ -67,6 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: CustomTextField(
                       textController: _emailController,
                       hintText: "name@example.com",
+                      keyboardType: .emailAddress,
                     ),
                   ),
                   Text(

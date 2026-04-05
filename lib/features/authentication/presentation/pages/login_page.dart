@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widget_previews.dart';
 import 'package:simple_ecommerce/core/theme/app_colors.dart';
 import 'package:simple_ecommerce/core/theme/app_theme.dart';
-import 'package:simple_ecommerce/features/authentication/presentation/widgets/custom_text_field.dart';
-import 'package:simple_ecommerce/features/authentication/presentation/widgets/header.dart';
+import 'package:simple_ecommerce/features/authentication/presentation/widgets/footer.dart';
+import 'package:simple_ecommerce/widgets/custom_text_field.dart';
+import 'package:simple_ecommerce/features/authentication/presentation/widgets/login_header.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: .start,
           spacing: 16.0,
           children: [
-            const Header(),
+            const LoginHeader(),
             Padding(
               padding: const .only(top: 32.0),
               child: Text(
@@ -103,27 +104,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Padding(
               padding: const .only(top: 16.0),
-              child: Row(
-                mainAxisAlignment: .center,
-                children: [
-                  Text(
-                    "Don't have an account?",
-                    style: Theme.of(
-                      context,
-                    ).textTheme.labelLarge?.copyWith(color: AppColors.neutral),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(padding: .all(8.0)),
-                    onPressed: () {},
-                    child: Text(
-                      "Create account",
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        color: AppColors.primary,
-                        fontWeight: .bold,
-                      ),
-                    ),
-                  ),
-                ],
+              child: Footer(
+                message: "Don't have an account?",
+                actionLabel: "Create account",
+                onPressed: () {},
               ),
             ),
           ],

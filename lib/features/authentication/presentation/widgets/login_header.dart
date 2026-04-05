@@ -3,8 +3,8 @@ import 'package:flutter/widget_previews.dart';
 import 'package:simple_ecommerce/core/theme/app_colors.dart';
 import 'package:simple_ecommerce/core/theme/app_theme.dart';
 
-class Header extends StatelessWidget {
-  const Header({super.key});
+class LoginHeader extends StatelessWidget {
+  const LoginHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Header extends StatelessWidget {
 
 PreviewThemeData lightTheme() =>
     PreviewThemeData(materialLight: AppTheme.lightTheme);
-@Preview(name: "Header Widget Preview", theme: lightTheme)
+@Preview(name: "Login Header Widget Preview", theme: lightTheme)
 Widget headerWidgetPreview() {
-  return Container(color: Colors.white, child: const Header());
+  return Container(color: Colors.white, child: const LoginHeader());
 }

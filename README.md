@@ -1,4 +1,4 @@
-# simple_ecommerce
+# full-stack_ecommerce
 
 A new Flutter project.
 
